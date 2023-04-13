@@ -1,4 +1,6 @@
-com/test2/test2/obj/ObjService.class
-com/test2/test2/obj/ObjController.class
-com/test2/test2/obj/Obj.class
-com/test2/test2/Test2Application.class
+com/bootingSpring/obj/ObjController.class
+com/bootingSpring/obj/ObjConfig.class
+com/bootingSpring/BootingSpringApplication.class
+com/bootingSpring/obj/ObjService.class
+com/bootingSpring/obj/ObjRepository.class
+com/bootingSpring/obj/Obj.class

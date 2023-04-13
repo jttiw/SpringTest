@@ -1,4 +1,4 @@
-package com.test2.test2.obj;
+package com.bootingSpring.obj;
 
 //TODO use interfeace/ abstract class
 

@@ -1,4 +1,6 @@
-/home/j/Documents/test2/src/main/java/com/test2/test2/obj/Obj.java
-/home/j/Documents/test2/src/main/java/com/test2/test2/Test2Application.java
-/home/j/Documents/test2/src/main/java/com/test2/test2/obj/ObjService.java
-/home/j/Documents/test2/src/main/java/com/test2/test2/obj/ObjController.java
+/home/j/IdeaProjects/SpringTest/src/main/java/com/bootingSpring/obj/ObjService.java
+/home/j/IdeaProjects/SpringTest/src/main/java/com/bootingSpring/obj/Obj.java
+/home/j/IdeaProjects/SpringTest/src/main/java/com/bootingSpring/obj/ObjController.java
+/home/j/IdeaProjects/SpringTest/src/main/java/com/bootingSpring/obj/ObjRepository.java
+/home/j/IdeaProjects/SpringTest/src/main/java/com/bootingSpring/BootingSpringApplication.java
+/home/j/IdeaProjects/SpringTest/src/main/java/com/bootingSpring/obj/ObjConfig.java

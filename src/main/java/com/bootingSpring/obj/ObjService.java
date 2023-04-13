@@ -1,9 +1,7 @@
-package com.test2.test2.obj;
+package com.bootingSpring.obj;
 
 import java.util.Optional;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 import java.util.Objects;
 

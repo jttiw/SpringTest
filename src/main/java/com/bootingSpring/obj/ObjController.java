@@ -1,8 +1,6 @@
-package com.test2.test2.obj;
+package com.bootingSpring.obj;
 
 
-import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
