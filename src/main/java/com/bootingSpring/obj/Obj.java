@@ -1,6 +1,6 @@
 package com.bootingSpring.obj;
 
-//TODO use interfeace/ abstract class
+//TODO use interfeace/ abstract class for Obj
 
 //import java.time.Duration;
 import java.time.LocalDate;
