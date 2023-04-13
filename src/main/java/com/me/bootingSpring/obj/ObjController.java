@@ -1,4 +1,4 @@
-package com.bootingSpring.obj;
+package com.me.bootingSpring.obj;
 
 
 import java.util.List;

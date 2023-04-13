@@ -1,11 +1,12 @@
-package com.bootingSpring.obj;
+package com.me.bootingSpring.obj;
 
-//TODO use interfeace/ abstract class for Obj
+//TODO use interface/ abstract class for Obj
 
 //import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 //import java.time.Period;
 
 import jakarta.persistence.*;
@@ -26,34 +27,30 @@ public class Obj {
     )
     Integer id;
     String name;
-    LocalDate doc;
-    LocalTime toc;
+    //LocalDate doc;
+    LocalDateTime toc;
 
     @Transient  //ie not in DB
-    LocalDateTime age;
+    Long age;
 
     public Obj() {
-        this.doc = LocalDate.now();
-        this.toc = LocalTime.now();
+        this.toc = LocalDateTime.now();
     }
 
-    public Obj(String name, Integer id, LocalDate doc, LocalTime toc) {
+    public Obj(String name, Integer id,LocalDateTime toc) {
         this.name = name;
         this.id = id;
-        this.doc = doc;
         this.toc = toc;
     }
 
-    public Obj(String name, LocalDate doc, LocalTime toc) {
+    public Obj(String name,LocalDateTime toc) {
         this.name = name;
-        this.doc = doc;
         this.toc = toc; 
     }
     
     public Obj(String name) {
         this.name = name;
-        this.doc = LocalDate.now();
-        this.toc = LocalTime.now(); 
+        this.toc = LocalDateTime.now();
     }
 
     public String getName(){
@@ -63,14 +60,11 @@ public class Obj {
         return this.id;
     }
 
-    public LocalDate getDoc() {
-        return this.doc;
-    }
-    public LocalTime getToc() {
+    public LocalDateTime getToc() {
         return this.toc;
     } 
     
-    public LocalDateTime getAge() {
+    public Long getAge() {
         return this.age;
     }
     public void setName(String name) {
@@ -79,19 +73,20 @@ public class Obj {
     public void setId(Integer id) {
         this.id = id;
     }
-    public void setDoc(LocalDate doc) {
-        this.doc = doc;
-    }
-    public void setToc(LocalTime toc) {
+    public void setToc(LocalDateTime toc) {
         this.toc = toc;
     }
     public void setAge() {
-        this.age = LocalDateTime.of(doc,toc);
+        LocalDateTime now = LocalDateTime.now();
+        if (now.getYear()<toc.getYear()) {
+            throw new IllegalStateException("Timestamp is corrput");
+        }
+        this.age = ChronoUnit.SECONDS.between(toc,now);
     }
 
     @Override
     public String toString() {
-        return "Obj [id=" + id + ", name=" + name + ", doc=" + doc + ", toc=" + toc + ", age=" + age  + "]";
+        return "Obj [id=" + id + ", name=" + name + ", toc=" + toc + ", age=" + age  + "]";
     }
 
 }
